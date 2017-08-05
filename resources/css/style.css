@@ -6,6 +6,12 @@ html {
 body {
   display: flex;
   flex-direction: column;
+
+}
+
+.container {
+  width: 960px;
+  margin: 0;
 }
 
 /* 960px site container? */
@@ -15,17 +21,18 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  float: right;
 }
 
 header img  {
-  display: flex;
+  display: inline-flex;
   height: 1.5rem;
   margin-left: 0.5rem;
-  padding-top: 0.41rem;
+  margin-top: 0.41rem;
 }
 
 header p {
-  display: flex;
+  display: inline-flex;
   font-size: 1rem;
   text-transform: uppercase;
   color: white;
@@ -41,12 +48,13 @@ header p {
 }
 
 .main-banner .textbox {
-  display:flex;
+  display: flex;
   flex-direction: column;
   position: relative;
   top: 9rem;
   padding: 2rem 3rem;
   width: 20rem;
+  height: 5.5rem;           /* Forced height */
   background-color: black;
 }
 
@@ -70,9 +78,15 @@ header p {
 
 nav {
   display: flex;
+  justify-content: center;
   background-color: firebrick;
   padding: 0.75rem 0;
+}
+
+.general-nav {
+  display: flex;
   justify-content: space-around;
+
 }
 
 nav a {
@@ -96,6 +110,7 @@ nav a {
 
 .product img {
   height: 9rem;
+  width: auto;
   margin: 2rem 2rem;
 }
 
@@ -135,10 +150,12 @@ footer {
 }
 
 @media only screen and (max-width: 1024rem) and (min-width: 470rem) {
+  .product-grid {
+    justify-content: space-between;
+  }
   .product {
     width: 47%;
   }
-
   nav a .option {
     display: none;
   }
@@ -166,14 +183,22 @@ footer {
     margin-top: 10rem;
   }
   .main-banner p {
-    padding-top: 1-rem
+    padding-top: 1rem;
+    font-size: 0.77rem;
+  }
+  h1 {
+    font-size: 1rem;
   }
   .product {
     width: 90%;
   }
   .location,
   .hours {
+    display: block;
     flex-direction: column;
+  }
+  footer {
+    justify-content: center;
   }
 
 }
