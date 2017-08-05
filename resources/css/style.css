@@ -1,0 +1,155 @@
+html {
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+body{
+  width: 960px;
+}
+
+header {
+  background-color: black;
+}
+
+header img  {
+  display: inline-flex;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  padding: 0.66rem 0;
+}
+
+/* Image and text not aligning in header */
+
+header p {
+  display: inline-flex;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.66rem 1rem;
+}
+
+.main-banner {
+  background-image: url("../images/moto.jpg");
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.main-banner .textbox {
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  top: 9rem;
+  padding: 2rem 3rem;
+  width: 20rem;
+  background-color: black;
+}
+
+/* textbox extends down too much */
+
+.main-banner p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 0.25rem;
+}
+
+.main-banner h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+nav {
+  display: flex;
+  background-color: firebrick;
+  padding: 0.75rem 0;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding-top: 3rem;
+}
+
+.product {
+  display: inline-flex;
+  flex-direction: column;
+  width: 30%;
+  border: 4px solid black;
+}
+
+.product img {
+  height: 9rem;
+  margin: 2rem 2rem;
+}
+
+.product p {
+  background-color: black;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.location-hours {
+  display: inline-flex;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  width: 960px;
+}
+
+.location-hours h2 {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.location,
+.hours {
+  width: 35%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 5rem;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+@media only screen and (max-width: 960rem) and (min-width: 480rem) {
+  .product {
+    width: 47%;
+  }
+  .location,
+  .hours {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-banner {
+    height: 15rem;
+  }
+  .main-banner .textbox {
+    margin-top: 10rem;
+  }
+  .main-banner p {
+    padding-top: 1-rem
+  }
+  .product {
+    width: 90%;
+  }
+}
