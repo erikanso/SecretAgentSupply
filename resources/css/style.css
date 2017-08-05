@@ -3,12 +3,16 @@ html {
   font-family: Helvetica;
 }
 
-body{
-  width: 960px;
+body {
+  display: flex;
+  flex-direction: column;
 }
+
+/* 960px site container? */
 
 header {
   background-color: black;
+  width: 100%;
 }
 
 header img  {
@@ -29,9 +33,10 @@ header p {
 
 .main-banner {
   background-image: url("../images/moto.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 25rem;
   display: flex;
-  justify-content: center;
 }
 
 .main-banner .textbox {
@@ -102,11 +107,10 @@ nav a {
 }
 
 .location-hours {
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
   padding-top: 3rem;
   padding-bottom: 4rem;
-  width: 960px;
 }
 
 .location-hours h2 {
@@ -129,17 +133,31 @@ footer {
   align-items: center;
 }
 
-@media only screen and (max-width: 960rem) and (min-width: 480rem) {
+@media only screen and (max-width: 1024rem) and (min-width: 470rem) {
   .product {
     width: 47%;
   }
+
+  nav a .option {
+    display: none;
+  }
+
+/* Doesn't work
+
+.product .extra {
+  display: none;
+}
+
+*/
+
   .location,
   .hours {
     width: 35%;
+    justify-content: space-between;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 469px) {
   .main-banner {
     height: 15rem;
   }
@@ -152,4 +170,9 @@ footer {
   .product {
     width: 90%;
   }
+  .location,
+  .hours {
+    flex-direction: column;
+  }
+
 }
