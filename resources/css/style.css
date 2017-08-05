@@ -12,11 +12,13 @@ body {
 
 header {
   background-color: black;
+  display: flex;
+  flex-direction: row;
   width: 100%;
 }
 
 header img  {
-  display: inline-flex;
+  display: flex;
   height: 1.5rem;
   margin-left: 0.5rem;
   padding: 0.66rem 0;
@@ -25,7 +27,7 @@ header img  {
 /* Image and text not aligning in header */
 
 header p {
-  display: inline-flex;
+  display: flex;
   text-transform: uppercase;
   color: white;
   padding: 0.66rem 1rem;
