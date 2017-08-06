@@ -11,7 +11,7 @@ body {
 
 .container {
   width: 960px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 /* 960px site container? */
@@ -94,8 +94,7 @@ nav a {
 
 .product-grid {
   display: flex;
-  justify-content: center space-between;
-  background-color: white;
+  justify-content: space-between;
   padding-top: 3rem;
 }
 
@@ -122,10 +121,11 @@ nav a {
 }
 
 .location-hours {
-  display: flex;
-  justify-content: space-around;
   padding-top: 3rem;
   padding-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .location-hours h2 {
@@ -144,33 +144,24 @@ footer {
   color: white;
   height: 5rem;
   display: flex;
-  text-align: left;
   align-items: center;
+  justify-content: center;
 }
 
-@media only screen and (max-width: 1024rem) and (min-width: 470rem) {
-  .product-grid {
-    justify-content: space-between;
-  }
+footer .copyright {
+  text-align: left;
+}
+
+
+@media only screen and (min-width: 470rem) and (max-width: 1024rem){
   .product {
     width: 47%;
   }
-  nav a .option {
+  nav .option {
     display: none;
   }
-
-/* Doesn't work
-
-.product .extra {
-  display: none;
-}
-
-*/
-
-  .location,
-  .hours {
-    width: 35%;
-    justify-content: space-between;
+  .product-grid .extra {
+    display: none;
   }
 }
 
