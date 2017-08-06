@@ -82,9 +82,13 @@ nav {
   padding: 0.75rem 0;
 }
 
-.general-nav {
+.largescreen-nav {
   display: flex;
   justify-content: space-around;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 nav a {
@@ -153,15 +157,16 @@ footer .copyright {
 }
 
 
-@media only screen and (min-width: 470rem) and (max-width: 1024rem){
+@media only screen and (max-width: 1024px){
   .product {
     width: 47%;
   }
-  nav .option {
+  .largescreen-nav {
     display: none;
   }
-  .product-grid .extra {
-    display: none;
+  .mobile-nav {
+    display: flex;
+    justify-content: center;
   }
 }
 
